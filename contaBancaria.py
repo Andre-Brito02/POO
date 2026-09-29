@@ -4,6 +4,14 @@ class BankAccount:
         self._name = name
         self._balance = initial_value
 
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, name:str):
+        self._name = name
+
     def deposit(self, deposit_value:float):
         if deposit_value > 0:
             self._balance += deposit_value
